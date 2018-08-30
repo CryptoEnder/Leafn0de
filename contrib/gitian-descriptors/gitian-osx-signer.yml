@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "git@bitbucket.org:beheronetwork/bhncoin-detached-sigs.git"
+- "url": "https://github.com/BeHeroCoin/behero-core-detached-sigs.git"
   "dir": "signature"
 files:
 - "bhncore-osx-unsigned.tar.gz"

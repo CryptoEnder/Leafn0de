@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "git@bitbucket.org:beheronetwork/bhncoin.git"
+- "url": "https://github.com/BeHeroCoin/behero-core.git"
   "dir": "bhncore"
 files: []
 script: |
