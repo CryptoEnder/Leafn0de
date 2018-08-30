@@ -1,0 +1,26 @@
+# /etc/conf.d/bhncored: config file for /etc/init.d/bhncored
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bhncore/bhncore.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bhncored"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bhncored.pid"
+
+# Where to write bhncored data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bhncored"
+
+# User and group to own bhncored process
+#BITCOIND_USER="bhncore"
+#BITCOIND_GROUP="bhncore"
+
+# Path to bhncored executable
+#BITCOIND_BIN="/usr/bin/bhncored"
+
+# Nice value to run bhncored under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

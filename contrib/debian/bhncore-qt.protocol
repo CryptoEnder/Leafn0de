@@ -1,0 +1,11 @@
+[Protocol]
+exec=bhncore-qt '%u'
+protocol=bhncore
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
