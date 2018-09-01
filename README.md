@@ -21,7 +21,7 @@ Join our growing Official Discord Server to speak directly with the team: https:
 <tr><td>Block Time</td><td>120 Seconds</td></tr>
 <tr><td>Total Coin Supply</td><td>25,000,000 BHN</td></tr>
 <tr><td>Premine</td><td>1,500,000 BHN</td></tr>
-<tr><td>Masternode</td><td>3,000 BHN</td></tr>
+<tr><td>Masternode</td><td>5,000 BHN</td></tr>
 <tr><td>Block Rewards</td><td>70% Masternodes/ 30% POS Wallets</td></tr>
 <tr><td>Maturity</td><td>30 Minutes</td></tr>
 <tr><td>Max Supply</td><td>100+ Years</td></tr>
