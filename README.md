@@ -41,7 +41,7 @@ Join our growing Official Discord Server to speak directly with the team: https:
 Note: Rewards halve every 1,000,000 blocks per 1,388 days until max supply is reached (100+ years).
 
 ### Links
-- [Official Website](https://www.beherocoin.io) 
+- [Official Website](https://www.behero.io) 
 - [Discord](https://discord.gg/TCryPGc)
 - [BitcoinTalk](https://bitcointalk.org/index.php?topic=2976500.0)
 - [Facebook](https://facebook.com/bhncoreofficial)
