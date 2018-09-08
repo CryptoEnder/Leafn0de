@@ -32,10 +32,10 @@ Join our growing Official Discord Server to speak directly with the team: https:
 
 <table>
 <th>Blocks</th><th>Block Rewards</th><th>Days</th>
-<tr><td>2 - 9600</td><td>40 BHN Core</td><td>7</td></tr>
-<tr><td>5,001 - 25,000</td><td>33 BHN Coins</td><td>28</td></tr>
-<tr><td>25,001 - 100,000</td><td>20 BHN Core</td><td>104</td></tr>
-<tr><td>100,000 - 1,100,000</td><td>10 BHN Core</td><td>1,388</td></tr>
+<tr><td>2 - 9600</td><td>40 BHN</td><td>40</td></tr>
+<tr><td>9601 - 38400</td><td>30 BHN</td><td>28</td></tr>
+<tr><td>38401 - 200,000</td><td>20 BHN</td><td>104</td></tr>
+<tr><td>100,000 - 1,100,000</td><td>10 BHN</td><td>1,388</td></tr>
 </table>
 
 Note: Rewards halve every 1,000,000 blocks per 1,388 days until max supply is reached (100+ years).
