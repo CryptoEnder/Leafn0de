@@ -18,13 +18,13 @@ Join our growing Official Discord Server to speak directly with the team: https:
 <table>
 <tr><td>Algorithm</td><td>BHN Protocol (Modified Version of Quark)</td></tr>
 <tr><td>Mining</td><td>Proof of Stake</td></tr>
-<tr><td>Block Time</td><td>120 Seconds</td></tr>
-<tr><td>Total Coin Supply</td><td>25,000,000 BHN</td></tr>
+<tr><td>Block Time</td><td>90 Seconds</td></tr>
+<tr><td>Total Coin Supply</td><td>40,000,000 BHN</td></tr>
 <tr><td>Premine</td><td>1,500,000 BHN</td></tr>
 <tr><td>Masternode</td><td>5,000 BHN</td></tr>
-<tr><td>Block Rewards</td><td>70% Masternodes/ 30% POS Wallets</td></tr>
+<tr><td>Block Rewards</td><td>80% Masternodes/ 10% POS/ 10% BHN FUND</td></tr>
 <tr><td>Maturity</td><td>30 Minutes</td></tr>
-<tr><td>Max Supply</td><td>100+ Years</td></tr>
+<tr><td>Max Supply</td><td>82+ Years</td></tr>
 
 </table>
 
@@ -32,7 +32,7 @@ Join our growing Official Discord Server to speak directly with the team: https:
 
 <table>
 <th>Blocks</th><th>Block Rewards</th><th>Days</th>
-<tr><td>100 - 5,000</td><td>1 BHN Core</td><td>7</td></tr>
+<tr><td>2 - 9600</td><td>40 BHN Core</td><td>7</td></tr>
 <tr><td>5,001 - 25,000</td><td>33 BHN Coins</td><td>28</td></tr>
 <tr><td>25,001 - 100,000</td><td>20 BHN Core</td><td>104</td></tr>
 <tr><td>100,000 - 1,100,000</td><td>10 BHN Core</td><td>1,388</td></tr>
