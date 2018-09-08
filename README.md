@@ -12,7 +12,7 @@ Users will also be able to exchange points and miles between real-world affiliat
 
 This real world implementation, yet to be named, will accessible by not only large retailers and companies, but small businesses as well. A custom API will be created to allow businesses globally to create and connect to their loyalty program to the BHN loyalty rewards program wallet and exchange.
 
-Join our growing Official Discord Server to speak directly with the team: https://discord.gg/TCryPGc
+Join our growing Official Discord Server to speak directly with the team: https://discord.gg/tCzJs5G
 
 ### Coin Specs
 <table>
