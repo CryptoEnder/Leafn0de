@@ -116,6 +116,8 @@ If you require further assistance contact the support team [Discord](https://dis
 ***
 `cp bhncore-cli /usr/local/bin`
 ***
+`cp bhncored /usr/local/bin`
+***
 `cd --`
 ***
 `bhncored -daemon`
