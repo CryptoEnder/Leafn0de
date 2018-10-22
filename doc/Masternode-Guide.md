@@ -231,7 +231,7 @@ Click "File Save"
 
 ***Step 7***
 * Close out of the wallet and reopen Wallet
-*Click on the Masternodes tab "My masternodes"
+* Click on the Masternodes tab "My masternodes"
 * Click start all in the masternodes tab
 ***
 
