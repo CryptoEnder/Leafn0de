@@ -114,7 +114,7 @@ public:
         nMaxMoneyOut = 25009988 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 100000;
+        nLastPOWBlock = 240;
         nModifierUpdateBlock = 1; // we use the version 2 for LFN
 
         const char* pszTimestamp = "Nov 23rd 2018, Trump again threatens to close southern border";
@@ -163,6 +163,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.push_back(CDNSSeedData("lfn-seed-1.dynu.net", "lfn-seed-1.dynu.net"));
         vSeeds.push_back(CDNSSeedData("lfn-seed-2.dynu.net", "lfn-seed-2.dynu.net"));
+        vSeeds.push_back(CDNSSeedData("lfn-seed-3.dynu.net", "lfn-seed-3.dynu.net"));
+        vSeeds.push_back(CDNSSeedData("lfn-seed-4.dynu.net", "lfn-seed-4.dynu.net"));
+        vSeeds.push_back(CDNSSeedData("lfn-seed-5.dynu.net", "lfn-seed-5.dynu.net"));
 
         // LFN coin addresses start with 'L'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
