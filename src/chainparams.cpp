@@ -99,7 +99,7 @@ public:
         pchMessageStart[1] = 0xb2;
         pchMessageStart[2] = 0xff;
         pchMessageStart[3] = 0xf1;
-        vAlertPubKey = ParseHex("045ad6f1551c2367f8ac0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
+        vAlertPubKey = ParseHex("043635a66ad599a93face6d23f09c96d2a17d18771ab70538862232aaacb5fe07087e016e5cd935478308e45cc533b4a98739d84a0aa8e7017633347909280b1a9");
         nDefaultPort = 6104;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nMaxReorganizationDepth = 30;
@@ -193,7 +193,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "03f5d558319b83ba252392a2027755d5ffa8fe7bb8a4ba500cd591e05cf881f1f9";
+        strSporkKey = "043635a66ad599a93face6d23f09c96d2a17d18771ab70538862232aaacb5fe07087e016e5cd935478308e45cc533b4a98739d84a0aa8e7017633347909280b1a9";
         strMasternodePoolDummyAddress = "LZyyFSCdDke6XE9jW8ZynBfKWuVpLuxPnh";
         nStartMasternodePayments = genesis.nTime;
 
