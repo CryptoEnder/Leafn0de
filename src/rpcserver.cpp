@@ -242,10 +242,10 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop BHN Core server.");
+            "\nStop LFN Core server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "BHN Core server stopping";
+    return "LFN Core server stopping";
 }
 
 
@@ -327,33 +327,33 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* BHN Core features */
-        {"bhncore", "masternode", &masternode, true, true, false},
-        {"bhncore", "listmasternodes", &listmasternodes, true, true, false},
-        {"bhncore", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"bhncore", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"bhncore", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"bhncore", "masternodedebug", &masternodedebug, true, true, false},
-        {"bhncore", "startmasternode", &startmasternode, true, true, false},
-        {"bhncore", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"bhncore", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"bhncore", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"bhncore", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"bhncore", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"bhncore", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"bhncore", "mnbudget", &mnbudget, true, true, false},
-        {"bhncore", "preparebudget", &preparebudget, true, true, false},
-        {"bhncore", "submitbudget", &submitbudget, true, true, false},
-        {"bhncore", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"bhncore", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"bhncore", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"bhncore", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"bhncore", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"bhncore", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"bhncore", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"bhncore", "checkbudgets", &checkbudgets, true, true, false},
-        {"bhncore", "mnsync", &mnsync, true, true, false},
-        {"bhncore", "spork", &spork, true, true, false},
+        /* LFN Core features */
+        {"leafn0de", "masternode", &masternode, true, true, false},
+        {"leafn0de", "listmasternodes", &listmasternodes, true, true, false},
+        {"leafn0de", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"leafn0de", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"leafn0de", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"leafn0de", "masternodedebug", &masternodedebug, true, true, false},
+        {"leafn0de", "startmasternode", &startmasternode, true, true, false},
+        {"leafn0de", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"leafn0de", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"leafn0de", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"leafn0de", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"leafn0de", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"leafn0de", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"leafn0de", "mnbudget", &mnbudget, true, true, false},
+        {"leafn0de", "preparebudget", &preparebudget, true, true, false},
+        {"leafn0de", "submitbudget", &submitbudget, true, true, false},
+        {"leafn0de", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"leafn0de", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"leafn0de", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"leafn0de", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"leafn0de", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"leafn0de", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"leafn0de", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"leafn0de", "checkbudgets", &checkbudgets, true, true, false},
+        {"leafn0de", "mnsync", &mnsync, true, true, false},
+        {"leafn0de", "spork", &spork, true, true, false},
 #ifdef ENABLE_WALLET
 
         /* Wallet */
@@ -1070,7 +1070,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> bhncore-cli " + methodname + " " + args + "\n";
+    return "> leafn0de-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

@@ -54,7 +54,7 @@ ds['.']['icvp'] = icvp
 ds['.']['vSrn'] = ('long', 1)
 
 ds['Applications']['Iloc'] = (370, 156)
-ds['BhnCore-Qt.app']['Iloc'] = (128, 156)
+ds['Leafn0de-Qt.app']['Iloc'] = (128, 156)
 
 ds.flush()
 ds.close()

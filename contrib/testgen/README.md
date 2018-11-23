@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven BHN Core tests.
+Utilities to generate test vectors for the data-driven LFN Core tests.
 
 Usage: 
 

@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The BHN Core developers
+// Copyright (c) 2018 The LFN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -46,7 +46,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "BHN Core cannot be compiled without assertions."
+#error "LFN Core cannot be compiled without assertions."
 #endif
 
 // 6 comes from OPCODE (1) + vch.size() (1) + BIGNUM size (4)
@@ -80,7 +80,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in ubhn) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in ulfn) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -1618,19 +1618,17 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
     if (nHeight == 0) {
-        nSubsidy = 1250000 * COIN;
-    } else if (nHeight <= 9600 && nHeight > 0) {
-        nSubsidy = 40 * COIN;
-    } else if (nHeight <= 38400 && nHeight > 9600) {
-        nSubsidy = 30 * COIN;
-    } else if (nHeight <= 200000 && nHeight > 38400) {
-        nSubsidy = 25 * COIN;
-    } else if (nHeight <= 500000 && nHeight > 200000) {
-        nSubsidy = 10 * COIN;
-    } else if (nHeight <= 1000000 && nHeight > 500000) {
-        nSubsidy = 5 * COIN;
+        nSubsidy = 100000 * COIN;
+    } else if (nHeight <= 250000 && nHeight > 0) {
+        nSubsidy = 12 * COIN;
+    } else if (nHeight <= 500000) {
+        nSubsidy = 16 * COIN;
+    } else if (nHeight <= 750000) {
+        nSubsidy = 20 * COIN;
+    } else if (nHeight <= 1000000 ) {
+        nSubsidy = 14 * COIN;
     } else {
-        nSubsidy = 1 * COIN;
+        nSubsidy = 10 * COIN;
     }
 
     // Check if we reached the coin max supply.
@@ -1642,19 +1640,17 @@ int64_t GetBlockValue(int nHeight)
     if (nMoneySupply >= Params().MaxMoneyOut())
         nSubsidy = 0;
 
+    if (fDebug && GetBoolArg("-printcreation", false)) {
+        LogPrintf("GetBlockValue(%d) : create=%s\n", nHeight, FormatMoney(nSubsidy).c_str());
+    }
+
     return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
     int64_t ret = 0;
-
-    // No rewards till masternode activation.
-    if (nHeight < Params().LAST_POW_BLOCK() || blockValue == 0)
-        return 0;
-
-    // Check if we reached coin supply
-    ret = blockValue * 0.80; // 80% of block reward
+    ret = blockValue * 0.80;
 
     return ret;
 }
@@ -1662,6 +1658,16 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 bool IsInitialBlockDownload()
 {
     LOCK(cs_main);
+
+    GetBlockValue(3);
+    GetBlockValue(250002);
+    GetBlockValue(499002);
+    GetBlockValue(500002);
+    GetBlockValue(900002);
+    GetBlockValue(1000020);
+    GetBlockValue(1600002);
+    GetBlockValue(4600002);
+
     if (fImporting || fReindex || chainActive.Height() < Checkpoints::GetTotalBlocksEstimate())
         return true;
     static bool lockIBDState = false;
@@ -2044,7 +2050,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("bhncore-scriptch");
+    RenameThread("leafn0de-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3140,7 +3146,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // BHN
+        // LFN
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -4573,7 +4579,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             return false;
         }
 
-        // BHN: We use certain sporks during IBD, so check to see if they are
+        // LFN: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
                 !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2);

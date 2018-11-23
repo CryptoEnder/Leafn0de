@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bhncore-cli and bhncored)
- * of a given instance of the BHN Core system.
+ * CBaseChainParams defines the base parameters (shared between leafn0de-cli and leafn0ded)
+ * of a given instance of the LFN Core system.
  */
 class CBaseChainParams
 {

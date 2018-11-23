@@ -1678,7 +1678,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                     if (coin_type == ALL_COINS) {
                         strFailReason = _("Insufficient funds.");
                     } else if (coin_type == ONLY_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 BHN.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 LFN.");
                     }
 
                     if (useIX) {
@@ -1706,7 +1706,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                 if (nChange > 0) {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-bhn-address
+                    // change transaction isn't always pay-to-lfn-address
                     CScript scriptChange;
 
                     // coin control: send change to custom address

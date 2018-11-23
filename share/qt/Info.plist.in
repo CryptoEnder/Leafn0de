@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The Pivx Core developers, 2017-@COPYRIGHT_YEAR@ The BHN Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The Pivx Core developers, 2017-@COPYRIGHT_YEAR@ The LFN Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>BhnCore-Qt</string>
+  <string>Leafn0de-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.savebitcoin.BhnCore-Qt</string>
+  <string>io.savebitcoin.Leafn0de-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +40,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.savebitcoin.BhnCorePayment</string>
+      <string>io.savebitcoin.Leafn0dePayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bhncore</string>
+        <string>leafn0de</string>
       </array>
     </dict>
   </array>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.savebitcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>BHN Core payment request</string>
+      <string>LFN Core payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -62,10 +62,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-bhncore-payment-request</string>
+        <string>application/x-leafn0de-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>bhncorepaymentrequest</string>
+          <string>leafn0depaymentrequest</string>
         </array>
       </dict>
     </dict>

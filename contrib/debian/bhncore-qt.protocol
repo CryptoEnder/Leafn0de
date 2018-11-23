@@ -1,6 +1,6 @@
 [Protocol]
-exec=bhncore-qt '%u'
-protocol=bhncore
+exec=leafn0de-qt '%u'
+protocol=leafn0de
 input=none
 output=none
 helper=true

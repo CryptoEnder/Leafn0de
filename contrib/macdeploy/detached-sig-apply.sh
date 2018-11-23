@@ -5,7 +5,7 @@ UNSIGNED=$1
 SIGNATURE=$2
 ARCH=x86_64
 ROOTDIR=dist
-BUNDLE=${ROOTDIR}/BhnCore-Qt.app
+BUNDLE=${ROOTDIR}/Leafn0de-Qt.app
 TEMPDIR=signed.temp
 OUTDIR=signed-app
 

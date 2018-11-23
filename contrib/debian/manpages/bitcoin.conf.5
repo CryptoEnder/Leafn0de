@@ -1,27 +1,27 @@
-.TH BHN COIN.CONF "5" "January 2011" "bhncore.conf 3.19"
+.TH LFN COIN.CONF "5" "January 2011" "leafn0de.conf 3.19"
 .SH NAME
-bhncore.conf \- bhncore configuration file
+leafn0de.conf \- leafn0de configuration file
 .SH SYNOPSIS
 All command-line options (except for '\-conf') may be specified in a configuration file, and all configuration file options may also be specified on the command line. Command-line options override values set in the configuration file.
 .TP
 The configuration file is a list of 'setting=value' pairs, one per line, with optional comments starting with the '#' character.
 .TP
-The configuration file is not automatically created; you can create it using your favorite plain-text editor. By default, bhncored(1) will look for a file named bhncore.conf(5) in the bhncore data directory, but both the data directory and the configuration file path may be changed using the '\-datadir' and '\-conf' command-line arguments.
+The configuration file is not automatically created; you can create it using your favorite plain-text editor. By default, leafn0ded(1) will look for a file named leafn0de.conf(5) in the leafn0de data directory, but both the data directory and the configuration file path may be changed using the '\-datadir' and '\-conf' command-line arguments.
 .SH LOCATION
-bhncore.conf should be located in $HOME/.bhncore
+leafn0de.conf should be located in $HOME/.leafn0de
 .SH NETWORK-RELATED SETTINGS
 .TP
 .TP
 \fBtestnet=\fR[\fI'1'\fR|\fI'0'\fR]
-Enable or disable run on the test network instead of the real *bhncore* network.
+Enable or disable run on the test network instead of the real *leafn0de* network.
 .TP
 \fBproxy=\fR\fI'127.0.0.1:9050'\fR
 Connect via a socks4 proxy.
 .TP
-\fBaddnode=\fR\fI'10.0.0.2:3133'\fR
+\fBaddnode=\fR\fI'10.0.0.2:6104'\fR
 Use as many *addnode=* settings as you like to connect to specific peers.
 .TP
-\fBconnect=\fR\fI'10.0.0.1:3133'\fR
+\fBconnect=\fR\fI'10.0.0.1:6104'\fR
 Use as many *connect=* settings as you like to connect ONLY to specific peers.
 .TP
 \fRmaxconnections=\fR\fI'value'\fR
@@ -29,7 +29,7 @@ Maximum number of inbound+outbound connections.
 .SH JSON-RPC OPTIONS
 .TP
 \fBserver=\fR[\fI'1'\fR|\fI'0'\fR]
-Tells *bhncore* to accept or not accept JSON-RPC commands.
+Tells *leafn0de* to accept or not accept JSON-RPC commands.
 .TP
 \fBrpcuser=\fR\fI'username'\fR
 You must set *rpcuser* to secure the JSON-RPC api.
@@ -44,10 +44,10 @@ By default, only RPC connections from localhost are allowed. Specify as many *rp
 Listen for RPC connections on this TCP port.
 .TP
 \fBrpcconnect=\fR\fI'127.0.0.1'\fR
-You can use *bhncore* or *bhncored(1)* to send commands to *bhncore*/*bhncored(1)* running on another host using this option.
+You can use *leafn0de* or *leafn0ded(1)* to send commands to *leafn0de*/*leafn0ded(1)* running on another host using this option.
 .TP
 \fBrpcssl=\fR\fI'1'\fR
-Use Secure Sockets Layer (also known as TLS or HTTPS) to communicate with *bhncore* '\-server' or *bhncored(1)*. Example of OpenSSL settings used when *rpcssl*='1':
+Use Secure Sockets Layer (also known as TLS or HTTPS) to communicate with *leafn0de* '\-server' or *leafn0ded(1)*. Example of OpenSSL settings used when *rpcssl*='1':
 .TP
 \fB\-rpcsslciphers=\fR<ciphers>
 Acceptable ciphers (default: TLSv1+HIGH:\:!SSLv2:\:!aNULL:\:!eNULL:\:!AH:\:!3DES:\:@STRENGTH)
@@ -59,16 +59,16 @@ Acceptable ciphers (default: TLSv1+HIGH:\:!SSLv2:\:!aNULL:\:!eNULL:\:!AH:\:!3DES
 .SH MISCELLANEOUS OPTIONS
 .TP
 \fBgen=\fR[\fI'0'\fR|\fI'1'\fR]
-Enable or disable attempt to generate BHNs.
+Enable or disable attempt to generate LFNs.
 .TP
 \fB4way=\fR[\fI'0'\fR|\fI'1'\fR]
-Enable or disable use SSE instructions to try to generate BHNs faster.
+Enable or disable use SSE instructions to try to generate LFNs faster.
 .TP
 \fBkeypool=\fR\fI'100'\fR
 Pre-generate this many public/private key pairs, so wallet backups will be valid for both prior transactions and several dozen future transactions.
 .TP
 \fBpaytxfee=\fR\fI'0.00'\fR
-Pay an optional transaction fee every time you send BHNs. Transactions with fees are more likely than free transactions to be included in generated blocks, so may be validated sooner.
+Pay an optional transaction fee every time you send LFNs. Transactions with fees are more likely than free transactions to be included in generated blocks, so may be validated sooner.
 .TP
 \fBallowreceivebyip=\fR\fI'1'\fR
 Allow direct connections for the 'pay via IP address' feature.
@@ -76,12 +76,12 @@ Allow direct connections for the 'pay via IP address' feature.
 .SH USER INTERFACE OPTIONS
 .TP
 \fBmin=\fR[\fI'0'\fR|\fI'1'\fR]
-Enable or disable start bhncored minimized.
+Enable or disable start leafn0ded minimized.
 .TP
 \fBminimizetotray=\fR[\fI'0'\fR|\fI'1'\fR]
 Enable or disable minimize to the system tray.
 .SH "SEE ALSO"
-bhncored(1)
+leafn0ded(1)
 .SH AUTHOR
 This manual page was written by Micah Anderson <micah@debian.org> for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.
 

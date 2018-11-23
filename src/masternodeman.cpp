@@ -481,21 +481,6 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
     /*
         Make a vector with all of the last paid times
     */
-    const unsigned int blockModulo = 8;
-    if (nBlockHeight > Params().LAST_POW_BLOCK() && nBlockHeight % blockModulo == 0)
-    {
-        LogPrint("masternode", "CMasternodeMan::GetNextMasternodeInQueueForPayment - should pay Fund\n");
-        BOOST_FOREACH (CMasternode& mn, vMasternodes) {
-        CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
-            if(address.ToString() == Params().FundAddress()) {   
-                LogPrint("masternode", "CMasternodeMan::GetNextMasternodeInQueueForPayment - found Fund address\n");
-                 CMasternode *pFundMasternode = &mn;
-                 if (pFundMasternode != NULL) {
-                     return pFundMasternode;
-                 }
-            }
-        }
-    }
 
     int nMnCount = CountEnabled();
     BOOST_FOREACH (CMasternode& mn, vMasternodes) {

@@ -35,7 +35,7 @@ enum NumConnections {
     CONNECTIONS_ALL = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for BHN Core network client. */
+/** Model for LFN Core network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT

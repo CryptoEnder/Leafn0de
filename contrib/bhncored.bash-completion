@@ -1,12 +1,12 @@
-# bash programmable completion for bhncored(1) and bhncore-cli(1)
+# bash programmable completion for leafn0ded(1) and leafn0de-cli(1)
 # Copyright (c) 2012,2014 Christian von Roques <roques@mti.ag>
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-have bhncored && {
+have leafn0ded && {
 
-# call $bhncored for RPC
-_bhncore_rpc() {
+# call $leafn0ded for RPC
+_leafn0de_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -16,23 +16,23 @@ _bhncore_rpc() {
                 ;;
         esac
     done
-    $bhncored "${rpcargs[@]}" "$@"
+    $leafn0ded "${rpcargs[@]}" "$@"
 }
 
-# Add bhncore accounts to COMPREPLY
-_bhncore_accounts() {
+# Add leafn0de accounts to COMPREPLY
+_leafn0de_accounts() {
     local accounts
-    accounts=$(_bhncore_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
+    accounts=$(_leafn0de_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_bhncored() {
+_leafn0ded() {
     local cur prev words=() cword
-    local bhncored
+    local leafn0ded
 
-    # save and use original argument to invoke bhncored
-    # bhncored might not be in $PATH
-    bhncored="$1"
+    # save and use original argument to invoke leafn0ded
+    # leafn0ded might not be in $PATH
+    leafn0ded="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -53,7 +53,7 @@ _bhncored() {
     if ((cword > 3)); then
         case ${words[cword-3]} in
             addmultisigaddress)
-                _bhncore_accounts
+                _leafn0de_accounts
                 return 0
                 ;;
             getbalance|gettxout|importaddress|importprivkey|listreceivedbyaccount|listreceivedbyaddress|listsinceblock)
@@ -74,7 +74,7 @@ _bhncored() {
                 return 0
                 ;;
             move|setaccount)
-                _bhncore_accounts
+                _leafn0de_accounts
                 return 0
                 ;;
         esac
@@ -90,7 +90,7 @@ _bhncored() {
             return 0
             ;;
         getaccountaddress|getaddressesbyaccount|getbalance|getnewaddress|getreceivedbyaccount|listtransactions|move|sendfrom|sendmany)
-            _bhncore_accounts
+            _leafn0de_accounts
             return 0
             ;;
     esac
@@ -114,12 +114,12 @@ _bhncored() {
 
             # only parse --help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($bhncored --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($leafn0ded --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
-                commands=$(_bhncore_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
+                commands=$(_leafn0de_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -133,7 +133,7 @@ _bhncored() {
     esac
 }
 
-complete -F _bhncored bhncored bhncore-cli
+complete -F _leafn0ded leafn0ded leafn0de-cli
 }
 
 # Local variables:

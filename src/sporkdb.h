@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BHN_COIN_CSPORKDB_H
-#define BHN_COIN_CSPORKDB_H
+#ifndef LFN_COIN_CSPORKDB_H
+#define LFN_COIN_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //BHN_COIN_CSPORKDB_H
+#endif //LFN_COIN_CSPORKDB_H

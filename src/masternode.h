@@ -22,7 +22,7 @@
 #define MASTERNODE_REMOVAL_SECONDS (130 * 60)
 #define MASTERNODE_CHECK_SECONDS 5
 
-#define MASTERNODE_COLLATERAL 5000
+#define MASTERNODE_COLLATERAL 4000
 
 using namespace std;
 
@@ -102,7 +102,7 @@ public:
 };
 
 //
-// The Masternode Class. It contains the input of the BHN collateral, signature to prove
+// The Masternode Class. It contains the input of the LFN collateral, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasternode

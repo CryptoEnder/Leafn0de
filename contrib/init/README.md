@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: bhncored.service
-Upstart: bhncored.conf
-OpenRC:  bhncored.openrc
-         bhncored.openrcconf
-CentOS:  bhncored.init
+SystemD: leafn0ded.service
+Upstart: leafn0ded.conf
+OpenRC:  leafn0ded.openrc
+         leafn0ded.openrcconf
+CentOS:  leafn0ded.init
 
 have been made available to assist packagers in creating node packages here.
 

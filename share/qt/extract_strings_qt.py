@@ -10,7 +10,7 @@ import operator
 import os
 import sys
 
-OUT_CPP="qt/bhncorestrings.cpp"
+OUT_CPP="qt/leafn0destrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):
@@ -74,10 +74,10 @@ f.write("""
 #define UNUSED
 #endif
 """)
-f.write('static const char UNUSED *bhncore_strings[] = {\n')
+f.write('static const char UNUSED *leafn0de_strings[] = {\n')
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("bhncore-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("leafn0de-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};\n')
 f.close()

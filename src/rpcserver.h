@@ -96,7 +96,7 @@ public:
 };
 
 /**
- * BHN Core RPC command dispatcher.
+ * LFN Core RPC command dispatcher.
  */
 class CRPCTable
 {

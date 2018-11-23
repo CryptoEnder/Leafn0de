@@ -1,6 +1,6 @@
-usr/local/bin/bhncore-qt usr/bin
+usr/local/bin/leafn0de-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin16.xpm usr/share/pixmaps
 share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/bhncore-qt.desktop usr/share/applications
-debian/bhncore-qt.protocol usr/share/kde4/services/
+debian/leafn0de-qt.desktop usr/share/applications
+debian/leafn0de-qt.protocol usr/share/kde4/services/

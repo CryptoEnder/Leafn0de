@@ -305,7 +305,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from BHN Core
+    // Update address book model from LFN Core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

@@ -1,0 +1,26 @@
+[Unit]
+Description=LFN Core's distributed currency daemon
+After=network.target
+
+[Service]
+User=leafn0de
+Group=leafn0de
+
+Type=forking
+PIDFile=/var/lib/leafn0ded/leafn0ded.pid
+
+ExecStart=/usr/bin/leafn0ded -daemon -pid=/var/lib/leafn0ded/leafn0ded.pid \
+          -conf=/etc/leafn0de/leafn0de.conf -datadir=/var/lib/leafn0ded
+
+ExecStop=-/usr/bin/leafn0de-cli -conf=/etc/leafn0de/leafn0de.conf \
+         -datadir=/var/lib/leafn0ded stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

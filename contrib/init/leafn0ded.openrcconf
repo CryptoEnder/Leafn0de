@@ -1,0 +1,26 @@
+# /etc/conf.d/leafn0ded: config file for /etc/init.d/leafn0ded
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/leafn0de/leafn0de.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/leafn0ded"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/leafn0ded.pid"
+
+# Where to write leafn0ded data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/leafn0ded"
+
+# User and group to own leafn0ded process
+#BITCOIND_USER="leafn0de"
+#BITCOIND_GROUP="leafn0de"
+
+# Path to leafn0ded executable
+#BITCOIND_BIN="/usr/bin/leafn0ded"
+
+# Nice value to run leafn0ded under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

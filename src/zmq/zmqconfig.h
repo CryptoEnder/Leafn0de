@@ -6,7 +6,7 @@
 #define BITCOIN_ZMQ_ZMQCONFIG_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bhncore-config.h"
+#include "config/leafn0de-config.h"
 #endif
 
 #include <stdarg.h>

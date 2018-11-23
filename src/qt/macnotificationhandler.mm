@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.beherocoin.BhnCore-Qt";
+        return @"io.leafn0decoin.Leafn0de-Qt";
     } else {
         return [self __bundleIdentifier];
     }

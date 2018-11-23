@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Leafn0de
+Comment=Leafn0de P2P Cryptocurrency
+Exec=leafn0de-qt %u
+Terminal=false
+Type=Application
+Icon=leafn0de128
+MimeType=x-scheme-handler/leafn0de;
+Categories=Office;Finance;
+Name[en_US]=leafn0de-qt.desktop

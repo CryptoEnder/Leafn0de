@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both bhncored and bhncore-qt, to make it harder for attackers to
+ * for both leafn0ded and leafn0de-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("BHN Core");
+const std::string CLIENT_NAME("LFN Core");
 
 /**
  * Client version number

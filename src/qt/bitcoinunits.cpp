@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The BHN Core developers
+// Copyright (c) 2018 The LFN Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BHN);
-    unitlist.append(mBHN);
-    unitlist.append(uBHN);
+    unitlist.append(LFN);
+    unitlist.append(mLFN);
+    unitlist.append(uLFN);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case BHN:
-    case mBHN:
-    case uBHN:
+    case LFN:
+    case mLFN:
+    case uLFN:
         return true;
     default:
         return false;
@@ -41,12 +41,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case BHN:
-        return QString("bhn");
-    case mBHN:
-        return QString("mbhn");
-    case uBHN:
-        return QString::fromUtf8("ubhn");
+    case LFN:
+        return QString("lfn");
+    case mLFN:
+        return QString("mlfn");
+    case uLFN:
+        return QString::fromUtf8("ulfn");
     default:
         return QString("???");
     }
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BHN:
-            return QString("BHN");
-        case mBHN:
-            return QString("mBHN");
-        case uBHN:
-            return QString::fromUtf8("μBHN");
+        case LFN:
+            return QString("LFN");
+        case mLFN:
+            return QString("mLFN");
+        case uLFN:
+            return QString::fromUtf8("μLFN");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BHN:
-            return QString("tBHN");
-        case mBHN:
-            return QString("mtBHN");
-        case uBHN:
-            return QString::fromUtf8("μtBHN");
+        case LFN:
+            return QString("tLFN");
+        case mLFN:
+            return QString("mtLFN");
+        case uLFN:
+            return QString::fromUtf8("μtLFN");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BHN:
-            return QString("BHN");
-        case mBHN:
-            return QString("Milli-BHN (1 / 1" THIN_SP_UTF8 "000)");
-        case uBHN:
-            return QString("Micro-BHN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case LFN:
+            return QString("LFN");
+        case mLFN:
+            return QString("Milli-LFN (1 / 1" THIN_SP_UTF8 "000)");
+        case uLFN:
+            return QString("Micro-LFN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BHN:
-            return QString("TestBHNs");
-        case mBHN:
-            return QString("Milli-TestBHN (1 / 1" THIN_SP_UTF8 "000)");
-        case uBHN:
-            return QString("Micro-TestBHN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case LFN:
+            return QString("TestLFNs");
+        case mLFN:
+            return QString("Milli-TestLFN (1 / 1" THIN_SP_UTF8 "000)");
+        case uLFN:
+            return QString("Micro-TestLFN (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case BHN:
+    case LFN:
         return 100000000;
-    case mBHN:
+    case mLFN:
         return 100000;
-    case uBHN:
+    case uLFN:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case BHN:
+    case LFN:
         return 8;
-    case mBHN:
+    case mLFN:
         return 5;
-    case uBHN:
+    case uLFN:
         return 2;
     default:
         return 0;
