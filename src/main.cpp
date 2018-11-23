@@ -1659,15 +1659,6 @@ bool IsInitialBlockDownload()
 {
     LOCK(cs_main);
 
-    GetBlockValue(3);
-    GetBlockValue(250002);
-    GetBlockValue(499002);
-    GetBlockValue(500002);
-    GetBlockValue(900002);
-    GetBlockValue(1000020);
-    GetBlockValue(1600002);
-    GetBlockValue(4600002);
-
     if (fImporting || fReindex || chainActive.Height() < Checkpoints::GetTotalBlocksEstimate())
         return true;
     static bool lockIBDState = false;
