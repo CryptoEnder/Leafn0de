@@ -62,4 +62,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides BhnCore-Qt, a GUI for BHN Core based on Qt.
+ This package provides Leafn0de-Qt, a GUI for BHN Core based on Qt.
